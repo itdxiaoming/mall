@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.util.StringUtil;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ import java.util.Map;
 public class BrandServiceImpl implements BrandService {
 
 
-    @Autowired
+    @Resource
     private BrandMapper brandMapper;
 
     /**
@@ -105,4 +106,12 @@ public class BrandServiceImpl implements BrandService {
         PageHelper.startPage(page,size);
         return (Page<Brand>) brandMapper.selectByExample(example);
     }
+
+    @Override
+    public List<Map> findBrandListByCategoryName(String categoryName) {
+        List<Map> listBrand = brandMapper.findBrandListByCategoryName(categoryName);
+        return listBrand;
+    }
+
+
 }
