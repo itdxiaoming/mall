@@ -14,6 +14,10 @@
     <modules>
         <module>worryfree_service_goods1</module>
         <module>worryfree_service_business</module>
+        <module>worryfree_service_config</module>
+        <module>worryfree_service_order</module>
+        <module>worryfree_service_system</module>
+        <module>worryfree_service_user</module>
     </modules>
     <dependencies>
         <dependency>

@@ -17,6 +17,7 @@
         <module>worryfree_common</module>
         <module>worryfree_common_db</module>
         <module>worrtfree_canal</module>
+        <module>worryfree_canal</module>
     </modules>
 
     <parent>
