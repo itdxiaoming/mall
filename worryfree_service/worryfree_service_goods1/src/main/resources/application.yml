@@ -9,9 +9,9 @@ spring:
     name: goods
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/changgou_goods?useUnicode=true&useSSL=false&characterEncoding=utf8
+    url: jdbc:mysql://172.16.153.2:3306/worryfree_goods?useUnicode=true&useSSL=false&characterEncoding=utf8
     username: root
-    password: xiaoming
+    password: 123456
 
 eureka:
   client:
@@ -32,3 +32,8 @@ hystrix:
         enabled: true
       isolation:
         strategy: SEMAPHORE
+
+
+
+workerId: 0
+datacenterId: 0

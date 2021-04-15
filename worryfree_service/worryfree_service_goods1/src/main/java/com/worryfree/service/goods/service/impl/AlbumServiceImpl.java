@@ -1,8 +1,8 @@
-package com.changgou.goods.service.impl;
+package com.worryfree.service.goods.service.impl;
 
-import com.changgou.goods.dao.AlbumMapper;
-import com.changgou.goods.service.AlbumService;
-import com.changgou.goods.pojo.Album;
+import com.worryfree.service.goods.dao.AlbumMapper;
+import com.worryfree.service.goods.service.AlbumService;
+import com.worryfree.goods.pojo.Album;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

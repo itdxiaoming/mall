@@ -1,11 +1,12 @@
 package com.worryfree.system.service.impl;
 
-import com.changgou.system.dao.AdminMapper;
-import com.changgou.system.service.AdminService;
-import com.changgou.pojo.Admin;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.worryfree.system.dao.AdminMapper;
+import com.worryfree.system.pojo.Admin;
+import com.worryfree.system.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
@@ -44,9 +45,27 @@ public class AdminServiceImpl implements AdminService {
      */
     @Override
     public void add(Admin admin){
+        String hashpw = BCrypt.hashpw(admin.getPassword(), BCrypt.gensalt());
+        admin.setPassword(hashpw);
         adminMapper.insert(admin);
     }
 
+    @Override
+    public boolean login(Admin admin) {
+        //查询 password
+//        验证密码正确性
+        Admin adminSelect = new Admin();
+        adminSelect.setLoginName(admin.getLoginName());
+        adminSelect.setStatus("1");
+
+        Admin adminSql = adminMapper.selectOne(adminSelect);
+
+        if (adminSql == null){
+            return false;
+        }
+        boolean checkpw = BCrypt.checkpw(admin.getPassword(), adminSql.getPassword());
+        return checkpw;
+    }
 
     /**
      * 修改

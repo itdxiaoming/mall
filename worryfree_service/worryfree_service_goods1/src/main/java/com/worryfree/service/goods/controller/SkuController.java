@@ -5,8 +5,11 @@ import com.worryfree.common.pojo.Result;
 import com.worryfree.common.pojo.StatusCode;
 import com.worryfree.goods.pojo.Sku;
 import com.worryfree.service.goods.service.SkuService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 @RestController
@@ -103,5 +106,18 @@ public class SkuController {
         return new Result(true,StatusCode.OK,"查询成功",pageResult);
     }
 
+    @GetMapping("spu/{spuId}")
+    public List<Sku>findSkuListBySpuId(@PathVariable("spuId") String spuId){
+
+        HashMap<String, Object> searchMap = new HashMap<>();
+
+        if (!"all".equals(spuId)){
+            searchMap.put("spuId",spuId);
+        }
+        searchMap.put("status","1");
+        List<Sku> skuList = skuService.findList(searchMap);
+
+        return skuList;
+    }
 
 }

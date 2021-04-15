@@ -3,8 +3,9 @@ package com.worryfree.common.pojo;
 /**
  * 返回码
  */
-public class StatusCode {
+public final class StatusCode {
 
+    private StatusCode() {};
     public static final int OK=20000;//成功
     public static final int ERROR =20001;//失败
     public static final int LOGINERROR =20002;//用户名或密码错误

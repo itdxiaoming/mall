@@ -1,8 +1,8 @@
-package com.changgou.goods.service.impl;
+package com.worryfree.service.goods.service.impl;
 
-import com.changgou.goods.dao.ParaMapper;
-import com.changgou.goods.service.ParaService;
-import com.changgou.goods.pojo.Para;
+import com.worryfree.service.goods.dao.ParaMapper;
+import com.worryfree.service.goods.service.ParaService;
+import com.worryfree.goods.pojo.Para;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

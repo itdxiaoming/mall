@@ -11,6 +11,9 @@
 
     <artifactId>worryfree_web</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>worryfree_web_search</module>
+    </modules>
 
 
 </project>

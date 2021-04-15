@@ -1,8 +1,8 @@
 package com.worryfree.system.service.impl;
 
-import com.changgou.system.dao.LoginLogMapper;
-import com.changgou.system.service.LoginLogService;
-import com.changgou.pojo.LoginLog;
+import com.worryfree.system.dao.LoginLogMapper;
+import com.worryfree.system.service.LoginLogService;
+import com.worryfree.system.pojo.LoginLog;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
 package com.worryfree.config.service.impl;
 
-import com.changgou.config.dao.FreightTemplateMapper;
-import com.changgou.config.service.FreightTemplateService;
-import com.changgou.config.pojo.FreightTemplate;
+import com.worryfree.config.dao.FreightTemplateMapper;
+import com.worryfree.config.service.FreightTemplateService;
+import com.worryfree.config.pojo.FreightTemplate;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

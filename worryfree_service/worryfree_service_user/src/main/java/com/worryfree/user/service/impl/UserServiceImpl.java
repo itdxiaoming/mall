@@ -1,8 +1,8 @@
 package com.worryfree.user.service.impl;
 
-import com.changgou.user.dao.UserMapper;
-import com.changgou.user.service.UserService;
-import com.changgou.user.pojo.User;
+import com.worryfree.user.dao.UserMapper;
+import com.worryfree.user.service.UserService;
+import com.worryfree.user.pojo.User;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

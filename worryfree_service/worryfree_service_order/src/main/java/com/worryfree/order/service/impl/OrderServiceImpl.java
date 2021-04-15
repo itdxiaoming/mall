@@ -1,8 +1,8 @@
 package com.worryfree.order.service.impl;
 
-import com.changgou.order.dao.OrderMapper;
-import com.changgou.order.service.OrderService;
-import com.changgou.order.pojo.Order;
+import com.worryfree.order.dao.OrderMapper;
+import com.worryfree.order.service.OrderService;
+import com.worryfree.order.pojo.Order;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

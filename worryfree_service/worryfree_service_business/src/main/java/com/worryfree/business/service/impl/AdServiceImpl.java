@@ -1,8 +1,8 @@
 package com.worryfree.business.service.impl;
 
-import com.changgou.business.dao.AdMapper;
-import com.changgou.business.service.AdService;
-import com.changgou.business.pojo.Ad;
+import com.worryfree.business.dao.AdMapper;
+import com.worryfree.business.service.AdService;
+import com.worryfree.business.pojo.Ad;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

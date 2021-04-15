@@ -18,6 +18,7 @@
         <module>worryfree_service_order</module>
         <module>worryfree_service_system</module>
         <module>worryfree_service_user</module>
+        <module>worryfree_service_search</module>
     </modules>
     <dependencies>
         <dependency>

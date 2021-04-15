@@ -1,5 +1,6 @@
 package com.worryfree.system.service;
 
+import com.worryfree.common.pojo.Result;
 import com.worryfree.system.pojo.Admin;
 import com.github.pagehelper.Page;
 
@@ -64,6 +65,12 @@ public interface AdminService {
     Page<Admin> findPage(Map<String, Object> searchMap, int page, int size);
 
 
+    /**
+     * 登录验证
+     * @param admin
+     * @return
+     */
+    boolean login(Admin admin);
 
 
 }

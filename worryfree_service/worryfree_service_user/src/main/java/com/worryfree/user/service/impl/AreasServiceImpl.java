@@ -1,8 +1,8 @@
 package com.worryfree.user.service.impl;
 
-import com.changgou.user.dao.AreasMapper;
-import com.changgou.user.service.AreasService;
-import com.changgou.user.pojo.Areas;
+import com.worryfree.user.dao.AreasMapper;
+import com.worryfree.user.service.AreasService;
+import com.worryfree.user.pojo.Areas;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

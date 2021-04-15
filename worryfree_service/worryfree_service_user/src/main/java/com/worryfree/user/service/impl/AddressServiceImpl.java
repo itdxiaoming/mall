@@ -1,8 +1,8 @@
 package com.worryfree.user.service.impl;
 
-import com.changgou.user.dao.AddressMapper;
-import com.changgou.user.service.AddressService;
-import com.changgou.user.pojo.Address;
+import com.worryfree.user.dao.AddressMapper;
+import com.worryfree.user.service.AddressService;
+import com.worryfree.user.pojo.Address;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

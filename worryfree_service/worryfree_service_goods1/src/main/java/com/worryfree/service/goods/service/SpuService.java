@@ -1,5 +1,6 @@
 package com.worryfree.service.goods.service;
 
+import com.worryfree.goods.pojo.Goods;
 import com.worryfree.goods.pojo.Spu;
 import com.github.pagehelper.Page;
 
@@ -21,18 +22,33 @@ public interface SpuService {
      */
     Spu findById(String id);
 
+    /**
+     * 根据ID查询商品
+     * @param id
+     * @return
+     */
+    public Goods findGoodsById(String id);
     /***
      * 新增
      * @param spu
      */
     void add(Spu spu);
 
+    /**
+     * 新增商品
+     * @param goods
+     */
+    void add(Goods goods);
     /***
      * 修改
      * @param spu
      */
     void update(Spu spu);
-
+    /***
+     * 修改
+     * @param goods
+     */
+    void update(Goods goods);
     /***
      * 删除
      * @param id
@@ -63,7 +79,30 @@ public interface SpuService {
      */
     Page<Spu> findPage(Map<String, Object> searchMap, int page, int size);
 
+    /**
+     * 审核
+     * @param id
+     */
+     void audit(String id);
+    /**
+     * 下架商品
+     * @param id
+     */
+     void pull(String id);
+    /**
+     * 上架商品
+     * @param id
+     */
+     void put(String id);
+    /**
+     * 恢复数据
+     * @param id
+     */
+     void restore(String id);
 
-
-
+    /**
+     * 物理删除
+     * @param id
+     */
+     void realDelete(String id);
 }

@@ -11,10 +11,10 @@ import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class SystemApplication {
+public class SystemGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SystemApplication.class,args);
+        SpringApplication.run(SystemGatewayApplication.class,args);
     }
 
     @Bean

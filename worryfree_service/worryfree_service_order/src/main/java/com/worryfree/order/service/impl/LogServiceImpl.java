@@ -1,8 +1,8 @@
 package com.worryfree.order.service.impl;
 
-import com.changgou.order.dao.LogMapper;
-import com.changgou.order.service.LogService;
-import com.changgou.order.pojo.Log;
+import com.worryfree.order.dao.LogMapper;
+import com.worryfree.order.service.LogService;
+import com.worryfree.order.pojo.Log;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;

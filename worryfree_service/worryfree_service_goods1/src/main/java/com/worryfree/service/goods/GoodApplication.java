@@ -2,9 +2,12 @@ package com.worryfree.service.goods;
 
 
 
+import com.worryfree.service.goods.util.IdWorker;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
@@ -12,7 +15,21 @@ import tk.mybatis.spring.annotation.MapperScan;
 @MapperScan(basePackages = {"com.worryfree.service.goods.dao"})
 public class GoodApplication {
 
+    @Value("${workerId}")
+    private Integer workerId;
+
+
+    @Value("${datacenterId}")
+    private Integer datacenterId;
+
     public static void main(String[] args) {
         SpringApplication.run(GoodApplication.class,args);
     }
+
+
+    @Bean
+    public IdWorker idWorker(){
+        return new IdWorker(workerId,datacenterId);
+    }
+
 }

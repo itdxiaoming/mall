@@ -18,6 +18,7 @@
         <module>worryfree_service_business_api</module>
         <module>worryfree_service_order_api</module>
         <module>worryfree_service_config_api</module>
+        <module>worryfree_service_search_api</module>
     </modules>
 
     <dependencies>
